@@ -1,0 +1,13 @@
+<% if object.errors.any? %>
+  <section class="panel panel-warning errors">
+    <article class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </article>
+
+    <ul class="panel-body">
+      <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>

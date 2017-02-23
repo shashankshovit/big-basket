@@ -1,0 +1,33 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.grid {
+	min-width: 500px;
+}
+.tile-grid {
+    padding: 10px 2px;
+}
+.tile {
+	height: 200px;
+	overflow: hidden;
+}
+.tile-grid img {
+	max-width: 225px;
+	width: 100%;
+}
+.img-edit {
+	max-width: 500px;
+	width: 100%;
+}
+
+.controls { 
+	width: 100%; 
+}
+.control-holder {
+    width: 50%;
+    float: left;
+}
+.control-holder .btn {
+	width: 100%;
+}

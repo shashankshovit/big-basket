@@ -1,0 +1,36 @@
+<section class="container">
+<h3>Sign Up for Big Basket</h3>
+</section>
+<section class="container">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="input-group input-group-lg">
+      <span class="input-group-addon">Name</span>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Your name please!", autofocus: true %>
+  </div>
+
+
+  <div class="input-group input-group-lg">
+      <span class="input-group-addon">Email</span>
+      <%= f.email_field :email, class: 'form-control', placeholder: "Your email please!" %>
+  </div>
+
+  <div class="input-group input-group-lg">
+      <span class="input-group-addon">Password</span>
+      <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+      <%= f.password_field :password, class: 'form-control', placeholder: "Your password please!", autocomplete: "off" %>
+  </div>
+  
+  <div class="input-group input-group-lg">
+      <span class="input-group-addon">Confirm password</span>
+      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Your password again!", autocomplete: "off" %>
+  </div>
+  
+  <div class="input-group input-group-lg add-button">
+    <input class="btn btn-primary" type="submit" value="Sign up!" />
+  </div>
+
+<% end %>
+
+</section>

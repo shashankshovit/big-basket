@@ -1,0 +1,52 @@
+<section class="container">
+	<h3>Add new item in store</h3>
+</section>
+<%= render partial: 'shared/errors', :locals => { :object => @item } %>
+
+<section class="container">
+		<%= form_for @item, html: {multipart: true, class: 'form-horizontal'} do |f| %>
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Item name</span>
+			<%= f.text_field :name, class: 'form-control', placeholder: "what is it?", value: @item.name %>
+		</div>
+
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Description</span>
+			<%= f.text_area :description, class: 'form-control', placeholder: "Any details you would like to add?", value: @item.description %>
+		</div>
+
+
+		<!-- <div class="input-group input-group-lg">
+			<span class="input-group-addon">Category</span>
+			<input class="form-control" type="text" placeholder="Item name" />
+		</div>
+
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Sub Category</span>
+			<input class="form-control" type="text" placeholder="Item name" />
+		</div> -->
+
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Quantity</span>
+			<%= f.number_field :quantity, class: 'form-control', placeholder: "How many in stock?", maxlength: 3, value: @item.quantity %>
+		</div>
+
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Price</span>
+			<span class="input-group-addon">Rs.</span>
+			<%= f.text_field :price, class: 'form-control', placeholder: "Cost per unit?", value: @item.price %>
+			<span class="input-group-addon">/-</span>
+		</div>
+
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Image</span>
+			<%= f.file_field :image, class: 'form-control', placeholder: "A picture is worth a thousand words!" %>
+		</div>
+
+		<div class="input-group input-group-lg add-button">
+			<input class="btn btn-primary" type="submit" value="Add To Inventory" />
+		</div>
+
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		<% end %>
+</section>
