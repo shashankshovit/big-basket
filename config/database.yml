@@ -10,11 +10,13 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: mysql2
+  # adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   pool: 5
-  username: "root"
-  password: "123456"
+  # username: "root"
+  # password: "123456"
+  username: user
   host: localhost
 
 development:
@@ -27,6 +29,10 @@ development:
 test:
   <<: *default
   database: BigBasket_test
+
+production:
+  <<: *default
+  database: BigBasket_production
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
