@@ -15,8 +15,8 @@ default: &default
   encoding: utf8
   pool: 5
   # username: "root"
-  # password: "123456"
-  username: user
+  username: 'postgres'
+  password: "123456"
   host: localhost
 
 development:
@@ -33,6 +33,8 @@ test:
 production:
   <<: *default
   database: BigBasket_production
+  username: user
+  # password: <%= ENV['BIGBASKET_DATABASE_PASSWORD'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -53,8 +55,3 @@ production:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: BigBasket_production
-  username: BigBasket
-  password: <%= ENV['BIGBASKET_DATABASE_PASSWORD'] %>
