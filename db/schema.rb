@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20170210022651) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "name",                   default: "", null: false
@@ -53,7 +56,7 @@ ActiveRecord::Schema.define(version: 20170210022651) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.float    "price",       limit: 24
+    t.float    "price"
     t.integer  "quantity"
     t.text     "description"
     t.string   "category"
