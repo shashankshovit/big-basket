@@ -75,9 +75,8 @@ GEM
     mime-types (1.25.1)
     minitest (5.10.1)
     multi_json (1.12.1)
-    mysql2 (0.3.21)
-    mysql2 (0.3.21-x86-mingw32)
     orm_adapter (0.5.0)
+    pg (0.19.0-x86-mingw32)
     polyglot (0.3.5)
     rack (1.5.5)
     rack-test (0.6.3)
@@ -136,7 +135,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
-  mysql2 (~> 0.3.18)
+  pg
   rails (= 4.1.2)
   turbolinks
   tzinfo-data
