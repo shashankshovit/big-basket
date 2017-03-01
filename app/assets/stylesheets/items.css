@@ -31,3 +31,12 @@
 .control-holder .btn {
 	width: 100%;
 }
+.details .name {
+	overflow: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.details .name:hover {
+    overflow: visible;
+    text-overflow: initial;
+}
