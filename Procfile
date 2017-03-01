@@ -1,1 +1,1 @@
-rake db:migrate
+web: rake db:migrate
